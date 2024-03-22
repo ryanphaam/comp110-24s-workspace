@@ -33,7 +33,7 @@ def favorite_color(input: dict[str, str]) -> str:
     return max_color
 
 
-def count(input: list[str]) -> dict[str,int]:
+def count(input: list[str]) -> dict[str, int]:
     """Counting the number of times that value appears in the input list."""
     dictionary: dict[str, int] = {}
     for item in input:
@@ -45,7 +45,7 @@ def count(input: list[str]) -> dict[str,int]:
 
 
 def alphabetizer(input: list[str]) -> dict[str, list[str]]:
-    """Alphabetize thw words in the list."""
+    """Alphabetize the words in the list."""
     dictionary: dict[str, list[str]] = {}
     new_list: list[str] = []
     for elem in input:
@@ -59,9 +59,9 @@ def alphabetizer(input: list[str]) -> dict[str, list[str]]:
     return dictionary
 
 
-def update_attendance(input: dict[str,list[str]], day: str, student: str) -> None:
+def update_attendance(input: dict[str, list[str]], day: str, student: str) -> None:
     """This will mutate and return an updated attendance list."""
     if day not in input:
         input[day] = [student]
-    else: 
+    elif student not in input[day]:
         input[day].append(student)
